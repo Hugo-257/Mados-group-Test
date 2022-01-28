@@ -14,54 +14,54 @@
 <body>
     <div class="container" >
 
-        <form action="/prop/ajout" method="post">
+        <form action="/update?id=<%=prop.id%>" method="post">
             <div class="form-group">
                 <label class="label" for="exampleInputEmail1">Titre</label>
-                <input name="title" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input value="<%=prop.title%>" name="title" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                     >
             </div>
             <div class="form-group">
                 <label class="label" for="exampleInputEmail1">Description</label>
-                <input name="description" type="textarea" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input  value="<%=prop.description%>"  name="description" type="textarea" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                     >
             </div>
             <div class="form-group">
                 <label class="label" for="exampleInputEmail1">Prix</label>
-                <input  name="prix" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input  value="<%=prop.prix%>"  name="prix" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                     >
             </div>
             <div class="form-group">
                 <label class="label" for="exampleInputEmail1">Lieu</label>
-                <input name="lieu" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input  value="<%=prop.lieu%>"  name="lieu" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                     >
             </div>
 
             <div class="form-group">
                 <label class="label" for="exampleInputEmail1">Image</label>
-                <input name="image" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input  value="<%=prop.image%>" name="image" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                     >
             </div>
 
            <div class="specs-container"> 
             <div class="form-group">
                 <label class="label" for="exampleInputEmail1">Chambres</label>
-                <input  name="chambres" type="number" class="form-control input-number" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input   value="<%=prop.chambres%>"  name="chambres" type="number" class="form-control input-number" id="exampleInputEmail1" aria-describedby="emailHelp"
                     >
             </div>
             
             <div class="form-group">
                 <label class="label" for="exampleInputEmail1">Douches</label>
-                <input name="douches" type="number" class="form-control input-number" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input  value="<%=prop.douches%>"  name="douches" type="number" class="form-control input-number" id="exampleInputEmail1" aria-describedby="emailHelp"
                     >
             </div>
             <div class="form-group">
                 <label class="label" for="exampleInputEmail1">Toilettes</label>
-                <input name="toilettes" type="number" class="form-control input-number" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input  value="<%=prop.toilettes%>"  name="toilettes" type="number" class="form-control input-number" id="exampleInputEmail1" aria-describedby="emailHelp"
                     >
             </div>
         </div>
         
-            <button type="submit" class="btn btn-primary">Ajouter</button>
+            <button type="submit" class="btn btn-primary">Modifier</button>
             <a style="margin-left:20px" href="/" class="btn btn-outline-danger">Annuler</a>
         </form>
     </div>

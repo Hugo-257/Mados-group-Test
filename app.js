@@ -45,6 +45,21 @@ app.get('/update',async (req,res)=>{
   res.render('propriete/update',{prop:propriete})
 })
 
+app.post('/update',async (req,res)=>{
+  console.log(req.query.id);
+  const propriete=await Propriete.update({
+     ...req.body
+  },{where:{id:req.query.id}})
+ res.redirect('/')
+})
+
+
+app.get('/delete',async (req,res)=>{
+  const propriete=await Propriete.destroy({where:{id:req.query.id}})
+  res.redirect('/')
+
+})
+
 
 
 app.use('/auth',authRoute,express.static(path.join(__dirname, 'public')))
