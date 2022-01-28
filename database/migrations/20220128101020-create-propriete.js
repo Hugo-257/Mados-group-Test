@@ -16,23 +16,27 @@ module.exports = {
         type:Sequelize.STRING,
         allowNull:false   
       },
-      Prix:{
+      prix:{
           type:Sequelize.STRING,
           allowNull:false       
       },
-      Lieu:{
+      image:{
+        type:Sequelize.STRING,
+        allowNull:false
+      },
+      lieu:{
           type:Sequelize.STRING,
           allowNull:false
       },
-      Chambres:{
+      chambres:{
           type:Sequelize.STRING,
           allowNull:false
       },
-      Douches:{
+      douches:{
           type:Sequelize.STRING,
           allowNull:false
       },
-      Toilettes:{
+      toilettes:{
           type:Sequelize.STRING,
           allowNull:false
       },      

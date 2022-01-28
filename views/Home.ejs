@@ -38,7 +38,7 @@
         <div class="main-section">
             <h3>Proprietes en vente</h1>
 
-                <% for(let i=0;i<5 ;i++){%>
+                <% proprietes.forEach(prop=>{%>
                     <div id="container">
                         <div class="product-details">
 
@@ -54,26 +54,27 @@
                             <p class="information">" Let's spread the joy , here is Christmas , the most awaited day of
                                 the year.</p>
 
-                            <a href="/propriete/1" class="btn btn-primary">Voir plus</a>
+                            <a href="/prop?id=<%=prop.id%>" class="btn btn-primary">Voir plus</a>
+                            
                         </div>
 
                         <div class="product-image">
-                            <img src="https://imagesnice2stayeurope.s3.amazonaws.com/uploads/image/image/48060/IMG_1273-min.jpg"
+                            <img src="<%=prop.image%>"
                                 alt="">
                             <div class="info">
                                 <h2> Description</h2>
                                 <ul>
-                                    <li><strong>Prix : </strong>500.000 FBU </li>
-                                    <li><strong>Lieu : </strong>Kanyosha</li>
-                                    <li><strong>Chambres: </strong>2</li>
-                                    <li><strong>Douches: </strong>2</li>
-                                    <li><strong>Toilettes: </strong>4</li>
+                                    <li><strong>Prix : </strong><%=prop.prix%> </li>
+                                    <li><strong>Lieu : </strong><%=prop.lieu%></li>
+                                    <li><strong>Chambres: </strong><%=prop.chambres%></li>
+                                    <li><strong>Douches: </strong><%=prop.douches%></li>
+                                    <li><strong>Toilettes: </strong><%=prop.toilettes%></li>
 
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <%}%>
+                    <%})%>
 
         </div>
 

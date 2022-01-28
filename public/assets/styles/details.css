@@ -2,14 +2,21 @@ body{
     display: flex;
     align-items: center;
     height: 100%;
-    padding-top: 200px;
+    padding-top: 50px;
 }
 
 .container{
-    width:30%;
+    
     text-align: center;
     padding-right: 50px;
     padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img{
+    width: 500px;
+    border-radius: 10px;
 }
 .form{
          display: flex;
@@ -22,3 +29,7 @@ body{
     margin-bottom: 10px;
 }
 
+.back_btn{
+    width:20%;
+    margin-bottom: 15px;
+}

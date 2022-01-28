@@ -8,7 +8,7 @@ const Utilisateur = require("./models/Utilisateur");
 const Client = require("./models/Client");
 const authRoute=require("./routes/Auth")
 const proprieteRoute=require("./routes/Propriete")
-
+const Propriete=require('./models/Proprietes')
 const app = express();
 
 app.set('view engine','ejs');
@@ -31,10 +31,18 @@ app.all("*", function (req, res, next) {
   next();
 });
 
-app.get('/',(req,res)=>{
+app.get('/',async (req,res)=>{
   console.log(req.cookies.userLog);
+  const proprietes=await Propriete.findAll()
   const user=req.cookies.userLog
-    res.render('home',{user})
+    res.render('home',{user,proprietes})
+})
+
+app.get('/update',async (req,res)=>{
+  console.log(req.cookies.userLog);
+  const propriete=await Propriete.findOne({where:{id:req.query.id}})
+  console.log(propriete);
+  res.render('propriete/update',{prop:propriete})
 })
 
 

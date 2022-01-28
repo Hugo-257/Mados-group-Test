@@ -3,7 +3,7 @@ const sequelize=require("../util/database");
 
 
 
-const Client = sequelize.define('Client', {
+const Propriete = sequelize.define('Propriete', {
     // Model attributes are defined here
 
     title:{
@@ -14,9 +14,13 @@ const Client = sequelize.define('Client', {
         type:Sequelize.STRING,
         allowNull:false   
       },
-        prix:{
+      prix:{
           type:Sequelize.STRING,
           allowNull:false       
+      },
+      image:{
+        type:Sequelize.STRING,
+        allowNull:false
       },
       lieu:{
           type:Sequelize.STRING,
@@ -30,9 +34,13 @@ const Client = sequelize.define('Client', {
           type:Sequelize.STRING,
           allowNull:false
       },
+      toilettes:{
+          type:Sequelize.STRING,
+          allowNull:false
+      },  
   }, {
     // Other model options go here
   });
 
 
-  module.exports = Client;    
+  module.exports = Propriete;    

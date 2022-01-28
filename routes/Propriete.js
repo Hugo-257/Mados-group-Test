@@ -1,13 +1,19 @@
 const express = require("express");
 const router=express.Router()
 const sequelize = require("../util/database");
-const Client = require("../models/Client");
-const Personne = require("../models/Personne");
+const Propriete = require("../models/Proprietes");
 const Logger = require("nodemon/lib/utils/log");
 
 router.get("/", async (req, res) => {
-  res.render("propriete/index",{});
+   const id=req.query.id;
+   const propriete=await Propriete.findOne({where:{id}})
+  res.render("propriete/index",{prop:{...propriete.dataValues}});
 });
+
+
+router.delete('/',(req,res)=>{
+        console.log(req.query);
+})
 
 router.get("/ajout", async (req, res) => {
     res.render("propriete/ajout",{});
@@ -15,8 +21,14 @@ router.get("/ajout", async (req, res) => {
   });
   
   router.post("/ajout", async (req, res) => {
-    console.log(req.body);
+    const attributes=req.body;
+    try{
+            await Propriete.create({...attributes})
+    }catch{
+        res.send("<h1 style='color:red'>Error</h1>")
+    }
     
   });
+
 
 module.exports = router;
