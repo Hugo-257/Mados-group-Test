@@ -1,0 +1,17 @@
+ .container{
+     margin: 50px;
+     width: 50%;
+ }
+
+ .label{
+    font-size: 1.5em;
+ }
+
+ .input-number{
+    width:50%
+ }
+
+ .specs-container{
+     display: flex;
+     margin-bottom: 15px;
+ }

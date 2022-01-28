@@ -1,0 +1,24 @@
+body{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-top: 200px;
+}
+
+.container{
+    width:30%;
+    text-align: center;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.form{
+         display: flex;
+         flex-direction: column;
+}
+
+.input{
+    height: 40px;
+    padding: 0 10px 0 10px;
+    margin-bottom: 10px;
+}
+
